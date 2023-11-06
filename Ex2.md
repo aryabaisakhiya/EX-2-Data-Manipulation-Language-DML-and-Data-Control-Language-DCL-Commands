@@ -35,7 +35,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
 ### QUERY:
-![image](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/78503538-98bc-4f72-9bf3-2950e08140b7)
+UPDATE MANAGER SET SALARY=(SALARY*0.10)+SALARY;
 
 
 
@@ -49,7 +49,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/5cff5988-230f-4530-a45a-8f238fdb15d5)
+DELETE WORKER FRPM MANAGER WHERE SALARY<2750;
 
 
 ### OUTPUT:
@@ -60,10 +60,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 
 
-### QUERY:
-
-![image](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/07e51f6a-5762-41be-9d95-ce4640973a6f)
-
+### QUERY
+SELECT ENAME AS 'NAME' ,SALARY * 12 AS 'ANNUAL SALARY' FROM MANAGER;
 
 
 ### OUTPUT:
@@ -75,7 +73,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![querry1 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/429aa92f-2735-4342-91fa-4e18af6db27e)
+SELECT ENAME FROM MANAGER WHERE DESIGNATION='CLERK';
 
 
 
@@ -90,7 +88,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![querry2 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/3caa4c6c-ded5-4589-8354-2945ab52077c)
+SELECT ENAME FROM MANAGER WHERE DESIGNATION != 'MANAGERS';
 
 
 ### OUTPUT:
@@ -102,8 +100,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![querry3 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/efebec9f-5e90-4071-9789-beedbc5be141)
 
+SELECT ENAME FROM MANAGER WHERE COMMISSION=0;
 
 
 ### OUTPUT:
@@ -115,7 +113,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/8ecb4793-98de-45fd-bc2f-49fae56c0178)
+SELECT ENAME FROM MANAGER WHERE ENAME LIKE 'S%' OR ENAME LIKE '%S';
 
 
 
@@ -128,8 +126,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
-![querry6 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/093599b2-25ad-4051-bfe9-0dd92b3d8f8f)
+SELECT ENAME,DESIGNATION,DEPTNO,HIREDATE FROM MANAGER ORDER BY HIREDATE ASC;
 
 
 ### OUTPUT:
@@ -141,7 +138,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![querry7 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/ec5240e3-085e-4d38-b4d0-f74f16aea4fe)
+SELECT * FROM MANAGER WHERE HIREDATE < '30 SEP 81';
 
 
 
@@ -155,8 +152,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 ### QUERY:
 
-![output7 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/5e86bb75-c04c-4be3-91d9-2c5a73c24ef4)
-
+SELECT ENAME,DEPTNO,SALARY FROM MANAGER ORDER BY DEPTNO ASC,SALARY DESC;
 
 
 ### OUTPUT:
@@ -168,8 +164,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![querry9 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/cb7cbe70-0435-4a73-96aa-0ebb6ce3aa89)
 
+SELECT COUNT(*) AS NUM_ROWS FROM MANAGER;
 
 
 ### OUTPUT:
@@ -179,7 +175,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q13) Find number of rows in the table EMP
 
 ### QUERY:
-![querry10 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/82ab1a25-cae3-4360-88b2-7770efb2ac04)
+SELECT COUNT(*) AS NUM_ROWS FROM MANAGER;
 
 
 
@@ -191,7 +187,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q14) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
-![querry11 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/ffdbe1e7-ec33-4e84-9bfd-dbdcacf60039)
+SELECT MAX(SALARY) AS MAX_SALARY,MIN(SALARY) AS MIN_SALARY,AVG(SALRY) AS 
+AVG_SALARY FROM MANAGER;
 
 
 
@@ -201,7 +198,8 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 ### QUERY:
-![querry12 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/e171beba-29b0-41ee-840c-86c42a88d9c2)
+SELECT DESIGNATION,COUNT(*) AS NUM_EMPLOYEES FROM MANAGER GROUP BY 
+DESIGNATION ORDER BY NUM_EMPLOYEES DESC;
 
 ### OUTPUT:
 ![output12 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/82ca2da1-f114-4421-83bf-a4f71594d533)
