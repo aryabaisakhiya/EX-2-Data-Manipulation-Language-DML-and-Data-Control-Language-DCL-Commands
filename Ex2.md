@@ -199,14 +199,11 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ![image](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/f57cc209-773f-402d-bf5b-f50e71a95c10)
 
 
-
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
-
 ### QUERY:
 ![querry12 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/e171beba-29b0-41ee-840c-86c42a88d9c2)
 
-
-
 ### OUTPUT:
 ![output12 ex2](https://github.com/aryabaisakhiya/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119393645/82ca2da1-f114-4421-83bf-a4f71594d533)
+
 Result:The Data Manipulation Language (DML) Commands and built in functions in SQL is executed sucessfully.
